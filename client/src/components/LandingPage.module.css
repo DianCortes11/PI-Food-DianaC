@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  min-height: 100vh;
+  min-width: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/LandingPage.jpeg");
+}
+
+.title {
+  color: white;
+  font-size: 8rem;
+  font-family: Rochester, Geneva, Tahoma, sans-serif;
+}
+
+.button {
+  color: white;
+  background-color: black;
+  border: 0.15rem solid rgb(47, 48, 48);
+  border-radius: 0.8rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.button:hover {
+  color: white;
+  background-color: rgb(47, 48, 48);
+  border: 0.15rem solid rgb(47, 48, 48);
+  cursor: pointer;
+}

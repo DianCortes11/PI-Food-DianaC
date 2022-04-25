@@ -1,0 +1,33 @@
+.container {
+  background-color: rgb(255, 255, 255, 0.4);
+  margin-left: 0.5rem;
+  margin-top: 2rem;
+  height: 24rem;
+  width: 22rem;
+  border-radius: 2rem;
+  border: 0.08rem solid white;
+  overflow: hidden;
+  color: black;
+  align-items: center;
+  font-size: 0.9rem;
+  font-family: Cabin;
+  overflow: hidden;
+}
+
+.h2 {
+  margin-bottom: 1rem;
+}
+
+.img {
+  height: 14rem;
+  width: 14rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  border: 0.08rem solid white;
+}
+
+.h4 {
+  text-decoration: none;
+  line-height: 1%;
+}

@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url("../images/Home.jpg");
+}
+
+.title {
+  font-family: Rochester;
+  font-size: 4rem;
+  color: black;
+}
+
+.select {
+  color: rgb(189, 186, 186);
+  background-color: rgb(37, 37, 37);
+  border: 0.1rem solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-left: 0.2rem;
+  margin-top: 1rem;
+  font-family: Cabin;
+}
+
+.select:hover {
+  cursor: pointer;
+}
+
+.createButton {
+  margin-top: 1rem;
+  color: black;
+  background-color: white;
+  border: 0.2rem solid rgb(37, 37, 37);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  font-family: Cabin;
+}
+
+.createButton:hover {
+  background-color: rgb(75, 74, 74);
+  cursor: pointer;
+  color: white;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}

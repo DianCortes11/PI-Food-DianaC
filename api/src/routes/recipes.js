@@ -5,13 +5,12 @@ const {Recipe, Diet} = require ('../db')
 const router = Router();
 const {YOUR_API_KEY} = process.env;
 
-//https://api.spoonacular.com/recipes/complexSearch?apiKey=f56564d5149c4c398a5f3b23bbfc23e3&addRecipeInformation=true
-//https://api.spoonacular.com/recipes/{id}/information
+
 
 //Traer la informacion de la API
 const getApi = async () =>{
-  const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?number=100&addRecipeInformation=true&apiKey=${YOUR_API_KEY}`)
-  //console.log(apiUrl)
+  const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?number=10&addRecipeInformation=true&apiKey=${YOUR_API_KEY}`)
+  //console.log(apiUrl.data)
   const apiInfo = await apiUrl.data.results.map(el =>{
       return{
           id: el.id,                         
@@ -23,31 +22,11 @@ const getApi = async () =>{
           healthLevel: el.healthScore,
           steps: el.analyzedInstructions[0]?.steps
       };
-      //res.send(apiInfo);
+      
   });
   return apiInfo;
 };
-/*
-const inDB = async () => {
-  const newApiInfo = await getApi();
-  console.log(newApiInfo);
-  newApiInfo.forEach( async el => {
-    Recipe.findOrCreate({ 
-        where: {
-        id: el.id,                         
-        name: el.name,
-        image: el.image,
-        score: el.score,            
-        diets: el.diets,
-        summary: el.summary,
-        healthLevel: el.healthLevel,
-        steps: el.steps
-        }
-    })
-  })
-}
-inDB();// Insertar recetas de la API a latabla Recipe;
-*/
+
 
 //Traer/buscar informacion en la base de datos
 const getDB = async () =>{
