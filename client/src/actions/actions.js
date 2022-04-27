@@ -14,6 +14,7 @@ export const GET_DETAIL = 'getDetail';
 export function getRecipes() {
     return async function (dispatch) {
       var json = await axios.get('http://localhost:3001/recipes');
+      console.log(json.data);    
       return dispatch({
         type: GET_RECIPES,
         payload: json.data,
@@ -58,7 +59,7 @@ export function getRecipes() {
   
   export function getDiets(){
     return async function(dispatch){
-      var json= await axios.get(`http://localhost:3001/types`);    
+      var json= await axios.get(`http://localhost:3001/types`);
       return dispatch({
         type: GET_DIETS,
         payload: json.data

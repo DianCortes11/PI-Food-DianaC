@@ -10,7 +10,11 @@ export default function Detail(){
   const dispatch = useDispatch() 
   useEffect (() => {dispatch(getDetail(id))} ,[]) // eslint-disable-line
   const detailstate = useSelector((state) => state.detail)
-  console.log(detailstate[0]);
+  /*if(detailstate.length > 0) {
+    detailstate[0].diets[0] = detailstate[0].diets[0].name;
+    console.log (detailstate[0].diets);
+  }*/
+  //console.log(detailstate[0].diets.length);
         
     return(
       <div>

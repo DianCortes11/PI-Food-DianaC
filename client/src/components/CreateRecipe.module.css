@@ -1,0 +1,113 @@
+.container {
+  font-family: Cabin;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../images/CreateRecipe3.jpeg");
+  min-height: 100%;
+  min-width: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: absolute;
+  overflow: hidden;
+}
+
+.title {
+  font-family: Rochester;
+  font-size: 3.5rem;
+  color: white;
+}
+
+.subtitles {
+  font-size: 1.3rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.inputName {
+  font-size: medium;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgb(190, 190, 190);
+  color: black;
+  padding: 0.3rem;
+  width: 25rem;
+}
+
+.inputNumbers {
+  font-size: medium;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgb(190, 190, 190);
+  color: black;
+  padding: 0.3rem;
+  width: 10rem;
+}
+
+.text {
+  font-size: medium;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgb(190, 190, 190);
+  color: black;
+  padding: 0.3rem;
+  width: 15rem;
+  height: 3rem;
+}
+
+.select {
+  font-size: medium;
+  border-radius: 0.5rem;
+  border: 0.1rem solid rgb(190, 190, 190);
+  color: black;
+  padding: 0.3rem;
+  width: 10rem;
+  height: 2.2rem;
+}
+
+.error {
+  font-size: 1rem;
+  color: lightgray;
+  margin-top: 0.2rem;
+}
+
+.buttonCreate {
+  color: rgb(189, 186, 186);
+  background-color: rgb(37, 37, 37);
+  border: 0.05rem solid white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-left: 0.2rem;
+  font-family: Cabin;
+  margin-bottom: 2rem;
+}
+
+.buttonDelete {
+  color: rgb(189, 186, 186);
+  background-color: rgb(37, 37, 37);
+  border: 0.05rem solid white;
+  border-radius: 0.2rem;
+  padding: 0.1rem 0.3rem;
+  margin-left: 0.2rem;
+  font-family: Cabin;
+  margin-bottom: 2rem;
+}
+
+.button {
+  color: rgb(189, 186, 186);
+  background-color: rgb(37, 37, 37);
+  border: 0.1rem solid black;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  margin-left: 0.2rem;
+  font-family: Cabin;
+  margin-bottom: 2rem;
+}
+
+.buttonCreate:hover {
+  background-color: rgb(75, 74, 74);
+  border: 0.05rem solid rgb(75, 74, 74);
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: rgb(75, 74, 74);
+  border: 0.1rem solid rgb(75, 74, 74);
+  cursor: pointer;
+}
