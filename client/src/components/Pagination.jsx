@@ -1,7 +1,7 @@
 import React from "react";
 import styles from './Pagination.module.css';
 
-export default function Paginado({recipesPerPage, allRecipes, pagination}){
+export default function Pagination({recipesPerPage, allRecipes, pagination}){
     const pageNumbers = []
 
     for(var i = 0; i <= Math.ceil(allRecipes/recipesPerPage); i++){

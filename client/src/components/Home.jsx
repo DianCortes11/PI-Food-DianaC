@@ -12,7 +12,7 @@ export default function Home(){
     const dispatch = useDispatch();
     const allRecipes = useSelector((state)=> state.recipes);
     const [currentPage, setCurrentPage] = useState(1);
-    const[recipesPerPage] = useState(9);
+    const [recipesPerPage, setRecipesPerPage]= useState(9) //eslint-disable-line
     const indexOfLastRecipe = currentPage * recipesPerPage; 
     const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage;
     const currentRecipes = allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe);
@@ -47,7 +47,7 @@ export default function Home(){
         setCurrentPage(1);
         setOrder(`ordered ${e.target.value}`)
     }
-
+console.log(currentRecipes)
     return(
         <div className = {styles.container}>
             <h1 className = {styles.title}>Recipes</h1>
@@ -79,7 +79,7 @@ export default function Home(){
                 }
             </div>
             <div>
-            <Pagination key= {1} recipesPerPage={recipesPerPage} allRecipes={allRecipes.length} paginado={pagination}/>
+            <Pagination key= {1} recipesPerPage={recipesPerPage} allRecipes={allRecipes.length} pagination={pagination}/>
             </div>
                 
             </div>
