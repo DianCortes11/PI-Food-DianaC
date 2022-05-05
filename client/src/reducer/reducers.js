@@ -24,7 +24,20 @@ function rootReducer (state = initialState, action) {
 
         case FILTER_BY_DIET:
             const allRecipes = state.allRecipes
-            const filterDiet = action.payload === 'All'? allRecipes: [...allRecipes]?.filter(el=> el.diets?.includes(action.payload))
+            var arra1 = []
+            allRecipes.map((d) => {
+                const darray = d.diets.map((e) => {
+                    if(typeof e === 'object'){
+                        return e.name
+                    } else {
+                        return e
+                    }
+                }); if(darray.includes(action.payload)){
+                    arra1.push(d)
+                } 
+            })
+
+            const filterDiet = action.payload === 'All'? allRecipes: arra1
                 return {
                     ...state,
                     recipes: filterDiet
